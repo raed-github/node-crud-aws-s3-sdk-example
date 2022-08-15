@@ -13,7 +13,7 @@ provider:
 
 plugins:
   - serverless-iam-roles-per-function
-
+  
 custom:
   fileBucketName: s3-file-bucket-${self:provider.stage}
 
