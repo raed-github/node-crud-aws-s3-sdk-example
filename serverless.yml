@@ -32,8 +32,8 @@ functions:
           - "s3:Put*"
         Resource: arn:aws:s3:::${self:custom.fileBucketName}/*
   s3FileGet:
-    handler: src/get.handler
-    name: s3-file-get
+    handler: src/retrieve.handler
+    name: s3-file-retrieve
     description: A lambda handler that retrieves a file from an S3 bucket based on an API Gateway trigger.
     events:
       - http:
