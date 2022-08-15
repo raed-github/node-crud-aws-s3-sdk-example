@@ -21,6 +21,6 @@ module.exports.handler = async (event) => {
     console.error("File Upload failed: ", e);
     response.body = JSON.stringify({ message: "File deletion failed.", errorMessage: e });
     response.statusCode = 500;
-   }
-   return response;
+    }
+return response;
 };
