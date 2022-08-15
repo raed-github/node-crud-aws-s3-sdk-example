@@ -19,7 +19,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: Install dependencies
-      run: yarn install serverless-iam-roles-per-function
+      run: yarn add serverless-iam-roles-per-function
     - name: serverless deploy
       uses: serverless/github-action@v3.1
       with:
