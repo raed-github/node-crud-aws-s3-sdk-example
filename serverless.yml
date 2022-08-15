@@ -31,6 +31,7 @@ functions:
         Action:
           - "s3:Put*"
         Resource: arn:aws:s3:::${self:custom.fileBucketName}/*
+        
   s3FileGet:
     handler: src/retrieve.handler
     name: s3-file-retrieve
@@ -44,6 +45,7 @@ functions:
         Action:
           - "s3:Get*"
         Resource: arn:aws:s3:::${self:custom.fileBucketName}/*
+
   s3FileDelete:
     handler: src/delete.handler
     name: s3-file-delete
