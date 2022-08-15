@@ -42,7 +42,7 @@ functions:
           method: GET
     iamRoleStatements:
       - Effect: "Allow"
-        Action:s
+        Action: 
           - "s3:Get*"
         Resource: arn:aws:s3:::${self:custom.fileBucketName}/*
 
