@@ -15,7 +15,7 @@ plugins:
   - serverless-iam-roles-per-function
   
 custom:
-  fileBucketName: bucket-number-849372-${self:provider.stage}
+  fileBucketName: ${self:service}-${self:provider.stage}-bucket
 
 functions:
   s3FileUploader:
@@ -41,8 +41,8 @@ functions:
           path: files/{fileKey}
           method: GET
     iamRoleStatements:
-      - Effect: Allow
-        Action:
+      - Effect: "Allow"
+        Action:s
           - "s3:Get*"
         Resource: arn:aws:s3:::${self:custom.fileBucketName}/*
 
